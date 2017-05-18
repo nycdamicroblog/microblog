@@ -1,0 +1,8 @@
+<h2>Welcome,  <%= @user.username %></h2>
+
+<% @blogs.each do |blog| %>
+
+<a href="/blog/<%= blog.id %>"><div><%= blog.title %></div></a>
+
+
+<% end %>

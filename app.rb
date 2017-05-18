@@ -31,6 +31,8 @@ post '/signin' do
 end
 
 get '/profile' do
+  @user = User.find(session[:user_id])
+  @blogs = user.blogs
   erb :profile
 end
 
