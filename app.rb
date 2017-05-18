@@ -38,6 +38,11 @@ get '/profile' do
   erb :profile
 end
 
+post '/profile' do
+  Blog.create(title: params[:title], content: params[:content], user_id: params[:user_id])
+  
+end
+
 get '/blogs' do
   @blogs = Blog.all
   erb :blogs
