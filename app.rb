@@ -14,6 +14,8 @@ end
 
 post  '/' do
   User.create(username: params[:username],password: params[:password])
+  user = User.where(username: params[:username]).first
+  session[:user_id] = user.id
   redirect '/profile'
 end
 
@@ -32,7 +34,7 @@ end
 
 get '/profile' do
   @user = User.find(session[:user_id])
-  @blogs = user.blogs
+  @blogs = @user.blogs
   erb :profile
 end
 
