@@ -10,20 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170518194936) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
     t.string "content"
     t.integer "user_id"
-=======
+
 ActiveRecord::Schema.define(version: 20170518195244) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
->>>>>>> 6e6808784dd2e477888561ed691561cc1b314001
   end
 
 end
