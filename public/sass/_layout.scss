@@ -42,4 +42,8 @@ body {
   background-image: url("https://bower.io/img/bower-logo.png");
   margin: 0 auto;
   background-size: 100% 100%;
+  transition: 5s all;
+  &:hover{
+    transform: rotate(360deg);
+  }
 }

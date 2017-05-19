@@ -26,6 +26,7 @@ end
 post '/signin' do
   @user = User.where(username: params[:username]).first
     if @user.password == params[:password]
+      session[:user_id] = @user.id
       redirect '/profile'
     else
       redirect '/signin'
@@ -40,7 +41,7 @@ end
 
 post '/profile' do
   Blog.create(title: params[:title], content: params[:content], user_id: params[:user_id])
-  
+
 end
 
 get '/blogs' do
