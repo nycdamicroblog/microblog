@@ -3,6 +3,8 @@ body {
   margin: 0 auto;
   background: linear-gradient(217deg, #ffffff, #dbdbdb, #c1c1c1);
   background-size: 400% 400%;
+  position: relative;
+  min-height: 100vh;
 }
 
 .header{
@@ -26,7 +28,7 @@ body {
   bottom: 87px;
   background-color: mintcream;
   display: none;
-  height: 35%;
+  height: 50%;
   top: 158px;
     ul{
       list-style: none;
@@ -47,6 +49,7 @@ body {
 }
 
 .footer{
+  position: absolute;
   margin-top: 10px;
   font-size: 20px;
   font-family: $layouttext;
@@ -75,8 +78,4 @@ body {
   &:hover{
     transform: rotate(360deg);
   }
-}
-
-.min-height{
-  min-height: 43em;
 }
