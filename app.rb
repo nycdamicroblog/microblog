@@ -53,3 +53,9 @@ get '/blog/:id' do
 	@blog = Blog.find(params[:id])
 	erb :blog
 end
+
+
+post '/logout' do
+
+  redirect :index
+end
