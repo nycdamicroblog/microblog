@@ -1,4 +1,4 @@
-<h2>Welcome,  <%= @user.username %></h2>
+<h2><%= @user.username %>'s Page</h2>
 
 <% @blogs.each do |blog| %>
 
@@ -19,3 +19,15 @@
   <input type="hidden" name="user_id" value= "<%= session[:user_id] %>">
   <input type="submit">
 </form>
+
+
+
+
+<% User.all.each do |user| %>
+
+
+<div class="all-users">
+<a href="/profile/<%= user.id %>"><div><%= user.username %></div></a>
+
+</div>
+<% end %>

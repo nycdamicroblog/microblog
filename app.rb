@@ -59,3 +59,9 @@ post '/logout' do
 
   redirect :index
 end
+
+get '/profile/:id' do
+  @user = User.find(params[:id])
+  @blogs = @user.blogs
+	erb :profile
+end
