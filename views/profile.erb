@@ -1,9 +1,13 @@
-<h2><%= @user.username %>'s Page</h2>
+<div class="main-content-for-profile">
 
 <div class="user-blogs">
 
+<h2><%= @user.username %>'s Page</h2>
+</div>
+
+<div class="profile-blog">
   <% @blogs.each do |blog| %>
-  <a href="/blog/<%= blog.id %>"><div><%= blog.title %></div></a>
+  <a href="/blog/<%= blog.id %>"><div class="blog-title"><%= blog.title %></div></a>
 
   <form class="" action="/blog-edit/<%= blog.id %>" method="post">
     <input type="submit" value="edit">
@@ -16,9 +20,9 @@
   </form>
 
   <% end %>
-
 </div>
 
+<div class="make-new-blog">
 
 <h2>Make New Blog</h2>
 <form class="blog-input-form" action="/profile" method="post">
@@ -28,8 +32,10 @@
   <input type="submit">
 </form>
 
+</div>
 
 
+<div class="other-users">
 
 <h3>Other User's Profiles</h3>
 
@@ -37,4 +43,8 @@
   <% User.all.each do |user| %>
   <a href="/profile/<%= user.id %>"><%= user.username %></a>
   <% end %>
+</div>
+
+</div>
+
 </div>
