@@ -47,3 +47,9 @@ get '/blogs' do
   @blogs = Blog.all
   erb :blogs
 end
+
+
+post '/logout' do
+
+  redirect :index
+end

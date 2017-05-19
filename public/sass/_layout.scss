@@ -19,6 +19,25 @@ body {
   }
 }
 
+.sideNavBar {
+  position: absolute;
+  z-index: -1;
+  height: 669px;
+  width: 100px;
+  bottom: 87px;
+  background-color: mintcream;
+    ul{
+      list-style: none;
+      a{
+        text-decoration: none;
+      }
+      li{
+        text-decoration: none;
+        color: white;
+      }
+    }
+}
+
 .footer{
   font-size: 20px;
   font-family: $layouttext;
