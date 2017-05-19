@@ -56,3 +56,9 @@ get '/logout' do
   session[:user_id] = nil
   redirect '/'
 end
+
+get '/profile/:id' do
+  @user = User.find(params[:id])
+  @blogs = @user.blogs
+	erb :profile
+end
