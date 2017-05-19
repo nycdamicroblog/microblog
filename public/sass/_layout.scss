@@ -26,14 +26,20 @@ body {
   width: 100px;
   bottom: 87px;
   background-color: mintcream;
+  display: none;
     ul{
       list-style: none;
       a{
         text-decoration: none;
       }
       li{
+        margin: 5px;
+        margin-top: 65px;
+        margin-left: -30px;
+        font-size: 15px;
+        font-family: $layouttext;
+        color: #4cb69f;
         text-decoration: none;
-        color: white;
       }
     }
 }
