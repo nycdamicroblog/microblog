@@ -69,8 +69,8 @@ get '/blog_edit/:id' do
 
 end
 
-post '/blog_delete/:id' do
-
-
-redirect '/profile'
+post '/blog_edit/:id' do
+  @blog = Blog.find(params[:id])
+  @blog.update(title:params[:title], content:params[:content])
+  redirect '/profile'
 end

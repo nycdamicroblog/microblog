@@ -3,15 +3,11 @@
 
 
 
-<form class="blog-edit-title" action="/blog-edit" method="post">
-  <input type="text" name="title" value="<%= @blog.title %>">
-  <input type="hidden" name="blog_id" value="<%= @blog.id %>">
-  <input type="submit">
-</form>
+<form class="blog-edit" action="/blog_edit/<%= @blog.id %>" method="post">
+  <div> <input type="text" name="title" value="<%= @blog.title %>"></div>
 
-<form class="blog-edit-content" action="/blog-edit" method="post">
 
-  <textarea name="content" rows="6" cols="20" maxlength="150"value="<%= @blog.content %>"></textarea>
+  <div><textarea name="content" rows="6" cols="20" maxlength="150"><%= @blog.content %></textarea></div>
   <input type="hidden" name="blog_id" value="<%= @blog.id %>">
   <input type="submit">
 </form>
