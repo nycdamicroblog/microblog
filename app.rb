@@ -1,12 +1,9 @@
-require 'sinatra'
-
 require 'sinatra/activerecord'
 
 set :database, 'sqlite3:microblog.sqlite3'
 set :sessions, true
 
 require './models'
-
 
 get '/' do
   erb :index
@@ -54,8 +51,7 @@ get '/blog/:id' do
 	erb :blog
 end
 
-
 post '/logout' do
-
-  redirect :index
+  session[:user_id] = nil
+  redirect '/'
 end
