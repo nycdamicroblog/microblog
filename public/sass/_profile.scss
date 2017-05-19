@@ -2,22 +2,56 @@ textarea {
     resize: none;
 }
 
-.all-users, .user-blogs {
-  width:80%;
-  margin:0 auto;
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.all-users a, .user-blogs a{
+  text-decoration: none;
+  color: grey;
+  font-size: 10px;
+  font-family: $bodytext;
 }
 
-.all-users a, .user-blogs a {
-  font-size: 20px;
-}
-
-.user-blogs {
-  justify-content: center;
-}
 
 .blog-text {
   font-size:20px;
+}
+
+.main-content-for-profile{
+  border: 2px solid #4cb69f;
+  margin: 0 auto;
+  display: inline-block;
+  width: 35em;
+  height: 50em;
+  background-color: white;
+  padding: 10px;
+  .user-blogs {
+    justify-content: center;
+    h2 {
+      background-color: rgba(76, 182, 159, 0.45);
+      font-size: 25px;
+      font-family: $layouttext;
+      padding: 10px;
+    }
+  }
+  .profile-blog a{
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+    font-family: $bodytext;
+  }
+  .make-new-blog{
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    font-family: $headertext;
+    background-color: rgba(76, 182, 159, 0.45);
+  }
+  .other-users{
+    h3{
+      font-family: $layouttext;
+      font-size: 15px;
+    }
+    .all-users a{
+      font-family: $headertext;
+      font-size: 15px;
+    }
+  }
 }
