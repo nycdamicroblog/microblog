@@ -15,7 +15,7 @@
 <h2>Make New Blog</h2>
 <form class="blog-input-form" action="/profile" method="post">
   <input type="text" name="title" placeholder="Blog Title">
-  <input type="text" name="content" placeholder="Content">
+  <div><textarea name="content" placeholder="(less than 150 characters)" rows="8" cols="20"></textarea> </div>
   <input type="hidden" name="user_id" value= "<%= session[:user_id] %>">
   <input type="submit">
 </form>
