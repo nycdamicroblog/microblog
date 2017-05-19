@@ -1,12 +1,14 @@
 <h2><%= @user.username %>'s Page</h2>
 
+<div class="user-blogs">
+
 <% @blogs.each do |blog| %>
 
 <a href="/blog/<%= blog.id %>"><div><%= blog.title %></div></a>
 
 
 <% end %>
-
+</div>
 
 <div>
 
@@ -23,11 +25,10 @@
 
 
 
-<% User.all.each do |user| %>
-
+<h3>Other User's Profiles</h3>
 
 <div class="all-users">
-<a href="/profile/<%= user.id %>"><div><%= user.username %></div></a>
-
+  <% User.all.each do |user| %>
+  <a href="/profile/<%= user.id %>"><%= user.username %></a>
+  <% end %>
 </div>
-<% end %>
