@@ -62,3 +62,15 @@ get '/profile/:id' do
   @blogs = @user.blogs
 	erb :profile
 end
+
+get '/blog_edit/:id' do
+	@blog = Blog.find(params[:id])
+  erb :blog_edit
+
+end
+
+post '/blog_delete/:id' do
+
+
+redirect '/profile'
+end

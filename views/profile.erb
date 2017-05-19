@@ -5,12 +5,12 @@
   <% @blogs.each do |blog| %>
   <a href="/blog/<%= blog.id %>"><div><%= blog.title %></div></a>
 
-  <form class="" action="/blog-edit/<%= blog.id %>" method="post">
+  <form class="" action="/blog_edit/<%= blog.id %>" method="get">
     <input type="submit" value="edit">
     <input type="hidden" name="blog_id" value="<%= blog.id %>">
   </form>
 
-  <form class="" action="blog-delete/<%= blog.id %>" method="post">
+  <form class="" action="/blog_delete/<%= blog.id %>" method="post">
     <input type="submit" name="" value="delete">
     <input type="hidden" name="blog_id" value="<%= blog.id %>">
   </form>
