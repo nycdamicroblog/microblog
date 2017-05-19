@@ -41,7 +41,6 @@ end
 
 post '/profile' do
   Blog.create(title: params[:title], content: params[:content], user_id: params[:user_id])
-
 end
 
 get '/blogs' do
