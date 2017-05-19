@@ -40,7 +40,7 @@ end
 
 post '/profile' do
   Blog.create(title: params[:title], content: params[:content], user_id: params[:user_id])
-  
+  redirect '/profile'
 end
 
 get '/blogs' do
