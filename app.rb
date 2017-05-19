@@ -41,9 +41,15 @@ end
 
 post '/profile' do
   Blog.create(title: params[:title], content: params[:content], user_id: params[:user_id])
+  redirect '/profile'
 end
 
 get '/blogs' do
   @blogs = Blog.all
   erb :blogs
+end
+
+get '/blog/:id' do
+	@blog = Blog.find(params[:id])
+	erb :blog
 end
