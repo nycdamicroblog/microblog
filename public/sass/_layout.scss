@@ -21,7 +21,7 @@ body {
 
 .sideNavBar {
   position: absolute;
-  z-index: -1;
+  z-index: 5;
   height: 669px;
   width: 100px;
   bottom: 87px;
@@ -31,15 +31,16 @@ body {
       list-style: none;
       a{
         text-decoration: none;
-      }
+        display: block;
       li{
         margin: 5px;
         margin-top: 65px;
         margin-left: -30px;
         font-size: 15px;
+        text-decoration: none;
         font-family: $layouttext;
         color: #4cb69f;
-        text-decoration: none;
+      }
       }
     }
 }
@@ -56,6 +57,7 @@ body {
   background-color: #4cb69f;
   text-align: center;
   padding: 20px;
+  z-index: 10;
 }
 
 .imageforlayout{
@@ -68,6 +70,7 @@ body {
   margin: 0 auto;
   background-size: 100% 100%;
   transition: 5s all;
+  z-index: 10;
   &:hover{
     transform: rotate(360deg);
   }
