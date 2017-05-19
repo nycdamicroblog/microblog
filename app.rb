@@ -74,3 +74,9 @@ post '/blog_edit/:id' do
   @blog.update(title:params[:title], content:params[:content])
   redirect '/profile'
 end
+
+post '/blog_delete/:id' do
+  @blog = Blog.find(params[:id])
+  @blog.destroy
+  redirect '/profile'
+end
