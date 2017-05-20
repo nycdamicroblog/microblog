@@ -1,10 +1,18 @@
+<div class="feed-page">
+
+
+
 <h1> Blogs Page </h1>
 
+<div class="feed">
 
 <% @blogs.each do |blogs| %>
 
-  <div class="blog-author"><%= blogs.user.username%></div>
-  <div class="blog-title"><%= blogs.title %></div>
+  <div class="blog-author"><%= blogs.user.username%>:</div>
+  <a href="/blog/<%= blogs.id %>"><div class="blog-title"><%= blogs.title %></div></a>
   <div class="blog-content"><%= blogs.content %></div>
 
 <% end %>
+</div>
+
+</div>

@@ -2,6 +2,10 @@
 
 
 
+<div class="blog-edit-content">
+<div class="edit-your-blog"> Please edit your blog down below </div>
+
+<div class="edit-form">
 
 <form class="blog-edit" action="/blog_edit/<%= @blog.id %>" method="post">
   <div> <input type="text" name="title" value="<%= @blog.title %>"></div>
@@ -11,3 +15,5 @@
   <input type="hidden" name="blog_id" value="<%= @blog.id %>">
   <input type="submit">
 </form>
+</div>
+</div>

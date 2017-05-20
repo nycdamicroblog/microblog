@@ -1,0 +1,39 @@
+.feed-page{
+  border: 2px solid #4cb69f;
+  margin: 0 auto;
+  display: inline-block;
+  width: 35em;
+  background-color: mintcream;
+  padding: 10px;
+  h1{
+    font-size: 50px;
+    font-family: $bodytext;
+    color: #4cb69f;
+    border-bottom: 2px solid grey;
+    margin: 0 auto;
+  }
+  .feed{
+    background-color: #4cb69f;
+    padding: 10px;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    .blog-title{
+      display: inline-flex;
+      font-size: 30px;
+      font-family: $shadowtext;
+    }
+    .blog-author{
+      margin-right: 5px;
+      display: inline-flex;
+      font-size: 25px;
+      font-family: $shadowtext;
+    }
+    .blog-content{
+      font-size: 20px;
+      font-family: $shadowtext;
+      margin-bottom: 25px;
+    }
+  }
+}

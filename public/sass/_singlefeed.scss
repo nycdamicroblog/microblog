@@ -1,0 +1,23 @@
+.single-blog-page{
+  border: 2px solid #4cb69f;
+  margin: 0 auto;
+  display: inline-block;
+  width: 35em;
+  background-color: lightgrey;
+  padding: 10px;
+  h2{
+    font-size: 50px;
+    font-family: $bodytext;
+    color: #4cb69f;
+    border-bottom: 2px solid grey;
+    margin: 0 auto;
+  }
+  .blog-text{
+    color: white;
+    display: inline-flex;
+    font-size: 30px;
+    font-family: $shadowtext;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
