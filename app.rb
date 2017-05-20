@@ -80,3 +80,21 @@ post '/blog_delete/:id' do
   @blog.destroy
   redirect '/profile'
 end
+
+get '/edit_info' do
+  @user = User.find(session[:user_id])
+  erb :edit_info
+end
+
+post '/user_edit' do
+  @user = User.find(session[:user_id])
+  @user.update(username:params[:username], password:params[:password])
+
+  redirect '/profile'
+end
+
+post '/user_delete' do
+  @user = User.find(session[:user_id])
+  @user.destroy
+  redirect '/logout'
+end
