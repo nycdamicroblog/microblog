@@ -1,0 +1,12 @@
+<h2>Edit User Info</h2>
+
+<form class="user-edit" action="/user_edit" method="post">
+  <div> Username<input type="text" name="username" value="<%= @user.username %>"></div>
+  <div> Password<input type="text" name="password" value="<%= @user.password %>"></div>
+  <input type="submit">
+</form>
+
+<h2>Delete Profile</h2>
+<form class="" action="/user_delete" method="post">
+  <input type="submit" name="" value="delete">
+</form>

@@ -8,7 +8,7 @@
 <div class="profile-blog">
   <% @blogs.each do |blog| %>
   <a href="/blog/<%= blog.id %>"><div class="blog-title"><%= blog.title %></div></a>
-
+  <% if @user == User.find(session[:user_id]) %>
   <form class="" action="/blog_edit/<%= blog.id %>" method="get">
     <input type="submit" value="edit">
     <input type="hidden" name="blog_id" value="<%= blog.id %>">
@@ -18,8 +18,8 @@
     <input type="submit" name="" value="delete">
     <input type="hidden" name="blog_id" value="<%= blog.id %>">
   </form>
-
   <% end %>
+<% end %>
 </div>
 
 <div class="make-new-blog">
