@@ -6,7 +6,7 @@
 
 <div class="feed">
 
-<% @blogs.last(10).each do |blogs| %>
+<% @blogs.last(10).reverse.each do |blogs| %>
 
   <div class="blog-author"><%= blogs.user.username%>:</div>
   <a href="/blog/<%= blogs.id %>"><div class="blog-title"><%= blogs.title %></div></a>
